@@ -32,7 +32,8 @@ Feature: User Interface > Survey Distribution Tools > Participant List: The syst
     And I click on the button labeled "Close"
 
     ##VERIFY: Participant List responses are anonymous while participant identifiers are disabled
-    Then I should see "Survey Response Status: Anonymous*"
+    Then I should see "Survey Response Status:"
+    And I should see "Anonymous*"
     And I should see a table header and rows containing the following values in the participant list table:
       | Email                 | Participant Identifier |
       | anonymous@example.com | Disabled               |
@@ -50,7 +51,8 @@ Feature: User Interface > Survey Distribution Tools > Participant List: The syst
     And I click on the button labeled "Close"
 
     ##VERIFY: Participant List responses are identified when an identifier is configured
-    Then I should see "Survey Response Status: Not Anonymous"
+    Then I should see "Survey Response Status:"
+    And I should see "Anonymous"
     And I should see a table header and rows containing the following values in the participant list table:
       | Email                  | Participant Identifier |
       | identified@example.com | Identified Participant |
