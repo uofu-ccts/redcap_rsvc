@@ -14,7 +14,7 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     And I click on the link labeled "Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
 
 
@@ -26,12 +26,12 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     And I enter "Chani Kynes" into the data entry form field labeled "Study Team Representative's Name"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I check the checkbox labeled "Lock"
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     And I enter the Username: "Test_Admin" and password "Testing123" for e-signature
-    And I click on the button labeled "Save" in the dialog box
+    And I click on the button labeled "Save"
     Then I should see "E-signed by test_admin"
     And I should see "Instrument locked by test_admin"
 #END

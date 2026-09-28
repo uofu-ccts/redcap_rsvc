@@ -10,7 +10,7 @@ Feature: Post Signature Form Actions: The system shall be able to complete the a
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
     
     #ACTION
@@ -26,7 +26,7 @@ Feature: Post Signature Form Actions: The system shall be able to complete the a
     And I click on the survey option label containing "Log out+ Open survey" label
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I click on the button labeled "Next Page >>"
     And I check the checkbox labeled "I certify that all of my information in the document above is correct."
     And I click on the button labeled "Submit"
@@ -49,7 +49,7 @@ Feature: Post Signature Form Actions: The system shall be able to complete the a
     And I enter "Marsh" into the data entry form field labeled "Participant Full Name"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I select "Complete" on the dropdown field labeled "Complete?"
     And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
 

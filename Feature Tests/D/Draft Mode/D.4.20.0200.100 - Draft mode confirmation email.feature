@@ -10,7 +10,7 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
 
     #FUNCTIONAL REQUIREMENT
@@ -25,16 +25,16 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
     And I select "Text Box (Short Text, Number, Date/Time, ...)" from the Field Type dropdown of the open "Add New Field" dialog box
     And I enter "Text Box" into the Field Label of the open "Add New Field" dialog box
     And I enter "textbox" into the Variable Name of the open "Add New Field" dialog box
-    And I click on the button labeled "Save" in the "Add New Field" dialog box
+    And I click on the button labeled "Save"
 
     #VERIFY
     Then I should see a field named "Text Box"
 
     When I click on the Edit image for the field named "Preferred Name"
     And I select "Yes - No" from the Field Type dropdown of the open "Edit Field" dialog box
-    And I click on the button labeled "Save" in the "Edit Field" dialog box
+    And I click on the button labeled "Save"
     And I click on the button labeled "Submit Changes for Review"
-    And I click on the button labeled "Submit" in the dialog box
+    And I click on the button labeled "Submit"
     And I click on the button labeled "Project Modification Module"
     And I click on the button labeled "Compose confirmation email"
 
@@ -49,6 +49,6 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
     And I should see "These changes MIGHT modify and/or delete existing data. So we ask 2 things of you:" in the dialog box
     And I should see "Send Email" in the dialog box
     And I should see "Cancel" in the dialog box
-    And I click on the button labeled "Send Email" in the dialog box
+    And I click on the button labeled "Send Email"
     Then I should see "EMAIL SENT!" in the dialog box
 #END

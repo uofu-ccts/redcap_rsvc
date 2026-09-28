@@ -29,9 +29,7 @@ Scenario: D.100.4.0200.100 Mosio
     And I select "Use participant\'s preference" on the drop down field labeled "STEP 1: Invitation type – How the participant is invited"
     And I click on the button labeled "Save"
     Then I should see "Settings for automated invitations were successfully saved!"
-    And I click on the button labeled "Close" on the dialog box
-
-    #FUNCTIONAL REQUIREMENT
+    And I click on the button labeled "Close"#FUNCTIONAL REQUIREMENT
     ##ACTION: Send an SMS message
     Given I click on the link labeled "Add / Edit Records"
     And I click on the button labeled "Add new record"
@@ -48,7 +46,7 @@ Scenario: D.100.4.0200.100 Mosio
     #FUNCTIONAL REQUIREMENT
     ##ACTION: View SMS Logging
     Given I click on the link labeled "Email & SMS Logging"
-    And I click on the button labeled "I understand and agree" on the dialog box
+    And I click on the button labeled "I understand and agree"
     And I click on the button labeled "Search emails and SMS messages"
     Then I should see "1 matching results"
     And I should see a table header and row containing the following values in the "Email & SMS Logging" table:

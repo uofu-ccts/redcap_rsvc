@@ -13,7 +13,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I wait for another 2 seconds
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I should see Project status: "Production"
 
     #FUNCTIONAL_REQUIREMENT
@@ -25,7 +25,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: saved name
-    When I click on the button labeled "View report" in the dialog box
+    When I click on the button labeled "View report"
     Then I should see "D.5.22.300.100 REPORT"
 
     When I click on the button labeled "Edit Report"
@@ -39,7 +39,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: edited name
-    When I click on the button labeled "View report" in the dialog box
+    When I click on the button labeled "View report"
     Then I should see "D.5.22.300.100 REPORT_EDIT"
 
     #FUNCTIONAL_REQUIREMENT
@@ -52,7 +52,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: edited description
-    When I click on the button labeled "View report" in the dialog box
+    When I click on the button labeled "View report"
     Then I should see "Test description"
 
     #FUNCTIONAL_REQUIREMENT
@@ -85,7 +85,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: included field
-    When I click on the button labeled "View report" in the dialog box
+    When I click on the button labeled "View report"
     Then I should see "Preferred Name"
 
     #FUNCTIONAL_REQUIREMENT
@@ -115,7 +115,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: included field
-    When I click on the button labeled "Continue editing report" in the dialog box
+    When I click on the button labeled "Continue editing report"
     And I select "prescreening_complete \"Complete?\"" on the dropdown field labeled "Live Filter 1" 
     And I select "email_address \"Please provide your email address:\"" on the dropdown field labeled "First by"
     And I should see the dropdown field labeled "Ascending order" with the options below
@@ -126,7 +126,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: included field
-    When I click on the button labeled "View report" in the dialog box
+    When I click on the button labeled "View report"
     Then I should see "Live filters:"
 
 #END

@@ -11,7 +11,7 @@ Feature: Manually add email to participant list: The system shall support the ab
     And I wait for another 2 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
 
     #FUNCTIONAL REQUIREMENT
@@ -20,9 +20,7 @@ Feature: Manually add email to participant list: The system shall support the ab
     And I click on the link labeled "Participant List"
     And I click on the button labeled "Add participants"
     And I enter "test@test.com" into the textarea field labeled "Add Emails to Participant List" 
-    And I click on the button labeled "Add participants" in the dialog box 
-
-    ##VERIFY
+    And I click on the button labeled "Add participants"##VERIFY
     Then I should see a dialog containing the following text: "PARTICIPANTS ADDED!" 
     And I should see "Email"
     And I should see "Record"

@@ -10,7 +10,7 @@ Feature: Accuracy and Reliability: The first pages of the printable pdf shall in
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
     
     #ACTION
@@ -26,7 +26,7 @@ Feature: Accuracy and Reliability: The first pages of the printable pdf shall in
     And I click on the survey option label containing "Log out+ Open survey" label
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I click on the button labeled "Next Page >>"
 
     #FUNCTIONAL REQUIREMENT

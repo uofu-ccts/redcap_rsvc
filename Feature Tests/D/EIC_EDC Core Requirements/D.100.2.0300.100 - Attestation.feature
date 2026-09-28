@@ -25,7 +25,7 @@ Feature: EIC / EDC Core Requirements: The system shall allow for an Attestation 
     And I enter "Sazed" into the data entry form field labeled "Participant Full Name"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I select "Complete" on the dropdown field labeled "Complete?"
     And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
     Then I should see "Record ID 1 successfully edited."
@@ -57,7 +57,7 @@ Feature: EIC / EDC Core Requirements: The system shall allow for an Attestation 
     And I enter "OreSeur" into the data entry form field labeled "Participant Full Name"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I click on the button labeled "Submit"
     Then I should see "Thank you for taking the survey."
     Given I successfully login to REDCap with the user "Test_Admin"

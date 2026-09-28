@@ -10,7 +10,7 @@ Feature: EIC Approval and Versioning: The System shall allow the approved versio
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
     
     #FUNCTIONAL REQUIREMENT
@@ -46,7 +46,7 @@ Feature: EIC Approval and Versioning: The System shall allow the approved versio
     And I check the checkbox labeled "N/A"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I enter "01-01-2001" into the data entry form field labeled "Date person obtained consent:"
     And I select "Complete" on the dropdown field labeled "Complete?"
     And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument

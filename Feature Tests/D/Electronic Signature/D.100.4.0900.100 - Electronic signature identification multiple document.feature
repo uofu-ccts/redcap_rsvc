@@ -14,7 +14,7 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I wait for another 2 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I see Project status: "Production"
 
     #FUNCTIONAL REQUIREMENT
@@ -26,12 +26,12 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I enter "Paul Atreides" into the data entry form field labeled "Study Team Representative's Name"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I check the checkbox labeled "Lock"
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     And I enter the Username: "Test_Admin" and password "Testing123" for e-signature
-    And I click on the button labeled "Save" in the dialog box
+    And I click on the button labeled "Save"
     Then I should see "E-signed by test_admin"
     And I should see "Instrument locked by test_admin"
 
@@ -42,13 +42,13 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I click the bubble to add a record for the "Documentation of Informed Consent" longitudinal instrument on event "Screening"
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
-    And I click on the button labeled "Save signature" in the dialog box
+    And I click on the button labeled "Save signature"
     And I check the checkbox labeled "Lock"
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     Then I should see "test_admin"
     And I enter the password "Testing123" for e-signature
-    And I click on the button labeled "Save" in the dialog box
+    And I click on the button labeled "Save"
     Then I should see "E-signed by test_admin"
     And I should see "Instrument locked by test_admin"
 #END

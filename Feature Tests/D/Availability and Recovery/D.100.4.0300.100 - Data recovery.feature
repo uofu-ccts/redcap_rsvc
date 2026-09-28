@@ -25,9 +25,9 @@ Feature: Availability and Recovery: Disaster recovery and business continuity pl
     And I click on the link labeled "Record Status Dashboard"
     And I click on the link labeled "2"
     And I select "Delete record (all forms/events)" on the dropdown field labeled "Choose action for record"
-    And I click on the button labeled "DELETE RECORD" in the dialog box
+    And I click on the button labeled "DELETE RECORD"
     Then I should see a dialog box containing the following text: "Record ID \"2\" was successfully deleted."
-    And I click on the button labeled "Close" in the dialog box
+    And I click on the button labeled "Close"
     And I click on the link labeled "Record Status Dashboard"
     Then I should NOT see "Luke Skywalker"
     And I logout
@@ -47,20 +47,20 @@ Feature: Availability and Recovery: Disaster recovery and business continuity pl
     And I click on the link labeled "Other Functionality"
     And I click on the button labeled "Delete the project"
     And I enter "DELETE" into the input field labeled "TYPE \"DELETE\" BELOW" in the dialog box 
-    And I click on the button labeled "Delete the project" in the dialog box
-    And I click on the button labeled "Yes, delete the project" in the dialog box
+    And I click on the button labeled "Delete the project"
+    And I click on the button labeled "Yes, delete the project"
     Then I should see a dialog box containing the following text: "Project successfully deleted!"
-    And I click on the button labeled "Close" in the dialog box
+    And I click on the button labeled "Close"
     And I click on the link labeled "Control Center"
     And I click on the link labeled "Browse Projects"
     And I enter "D.100.4.0300.100" into the input field labeled "Search project title by keyword(s):"
     And I click on the button labeled "Search project title"
     And I click on the link labeled "Delete it now"
     And I enter "DELETE" into the input field labeled "TYPE \"DELETE\" BELOW" in the dialog box 
-    And I click on the button labeled "Delete the project" in the dialog box
-    And I click on the button labeled "Yes, delete the project" in the dialog box
+    And I click on the button labeled "Delete the project"
+    And I click on the button labeled "Yes, delete the project"
     Then I should see a dialog box containing the following text: "Project successfully deleted!"
-    And I click on the button labeled "Close" in the dialog box
+    And I click on the button labeled "Close"
     And I enter "D.100.4.0300.100" into the input field labeled "Search project title by keyword(s):"
     And I click on the button labeled "Search project title"
     Then I should see "There are no projects to display"
@@ -73,9 +73,9 @@ Feature: Availability and Recovery: Disaster recovery and business continuity pl
     And I click on the link labeled "D.100.4.0300.100"
     And I click on the link labeled "Other Functionality"
     And I click on the button labeled "Download metadata & data (XML)"
-    And I click on the button labeled "Export Entire Project (metadata & data)" in the dialog box
+    And I click on the button labeled "Export Entire Project (metadata & data)"
     And I click on the download icon to receive the file for the "XML" format in the dialog box
-    And I click on the button labeled "Close" in the dialog box
+    And I click on the button labeled "Close"
     And I logout
     And I login to REDCap Shadow with an Admin account
     And I create a new project named "D.100.4.0300.100 Recovered" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file (Recovered XML for D.100.4.0300.100), and clicking the "Create Project" button

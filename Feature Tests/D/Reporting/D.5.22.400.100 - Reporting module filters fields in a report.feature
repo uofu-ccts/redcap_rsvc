@@ -12,7 +12,7 @@ Feature: Reporting: The system shall support the ability to limit filter/live fi
     When I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status"
     Then I should see Project status: "Production"
 
     #FUNCTIONAL_REQUIREMENT
@@ -30,7 +30,7 @@ Feature: Reporting: The system shall support the ability to limit filter/live fi
     Then I should see "Your report has been saved!" in the dialog box
 
     ##VERIFY: included field
-    When I click on the button labeled "View report" in the dialog box
+    When I click on the button labeled "View report"
     Then I should see "Live filters:"
     And I should see "Tester 123"
     And I should see "Screening"
