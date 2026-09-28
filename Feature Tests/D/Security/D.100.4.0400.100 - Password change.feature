@@ -9,7 +9,7 @@ Feature: Security: REDCap application shall allow a table-based user to change t
     Given I successfully login to REDCap with the user "Test_User1"
     And I click on the link labeled "Profile"
     And I click on the button labeled "Reset password"
-    And I click on the button labeled "Reset" in the dialog box
+    And I click on the button labeled "Reset"
     And I enter "Testing123" into the input field labeled "Password"
     And I enter "Testing123" into the input field labeled "Re-type password"
     And I click on the button labeled "Submit"
