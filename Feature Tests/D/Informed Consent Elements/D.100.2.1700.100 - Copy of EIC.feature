@@ -12,7 +12,7 @@ Feature: Informed Consent Elements: A copy of the informed consent must be provi
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status"
-    Then I see Project status: "Production"
+    Then I should see "Project status:  Production"
     
     #SETUP CONFIRMATION EMAIL
     Given I click on the button labeled "Disable" in the "Designate an email field for communications (including survey invitations and alerts)" row in the "Enable optional modules and customizations" section

@@ -12,7 +12,7 @@ Feature: Manually add email to participant list: The system shall support the ab
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status"
-    Then I see Project status: "Production"
+    Then I should see "Project status:  Production"
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Add participant email through the participant list

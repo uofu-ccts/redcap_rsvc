@@ -15,7 +15,7 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status"
-    Then I see Project status: "Production"
+    Then I should see "Project status:  Production"
 
 
     ##VERIFY
@@ -35,4 +35,3 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     Then I should see "E-signed by test_admin"
     And I should see "Instrument locked by test_admin"
 #END
-

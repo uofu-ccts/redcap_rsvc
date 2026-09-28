@@ -13,7 +13,7 @@ Feature: Reporting: The system shall support the ability to limit filter/live fi
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status"
-    Then I should see Project status: "Production"
+    Then I should see "Project status:  Production"
 
     #FUNCTIONAL_REQUIREMENT
     ##ACTION:  create report

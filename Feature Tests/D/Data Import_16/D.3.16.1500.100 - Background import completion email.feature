@@ -14,7 +14,7 @@ Feature: User Interface: The system shall provide the ability to email the user 
         And I click on the button labeled "Move project to production"
         And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
         And I click on the button labeled "YES, Move to Production Status"
-        Then I should see Project status: "Production"
+        Then I should see "Project status:  Production"
 
         Given I click on the link labeled "Data Import Tool"
         When I select "Import as background process (better for large data sets)" on the dropdown field labeled "Choose an import option"
