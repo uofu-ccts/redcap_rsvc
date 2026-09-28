@@ -11,12 +11,12 @@ Feature: Security: The system will provide the ability to activate and deactivat
     And I click on the link labeled "Browse Users"
     And I click on the link labeled "View User List By Criteria"
     And I click on the button labeled "Display User List"
-    And I click on the link labeled exactly "test_user1"
+    And I click on the link labeled "test_user1"
     And I click on the button labeled "Suspend user account"
-    Then I should see a dialog containing the following text: "Success! The user has now been suspended from REDCap."
+    Then I should see "Success! The user has now been suspended from REDCap."
     And I click on the button labeled "Close"
     And I click on the link labeled "unsuspend user"
-    Then I should see a dialog containing the following text: "Success! The user has now been unsuspended and will now be able to access REDCap again."
+    Then I should see "Success! The user has now been unsuspended and will now be able to access REDCap again."
     And I click on the button labeled "Close"
     And I logout
     

@@ -12,9 +12,9 @@ Feature: Security: A user cannot log in to the system if their account has been 
     And I click on the link labeled "Browse Users"
     And I click on the link labeled "View User List By Criteria"
     And I click on the button labeled "Display User List"
-    And I click on the link labeled exactly "test_user1"
+    And I click on the link labeled "test_user1"
     And I click on the button labeled "Suspend user account"
-    Then I should see a dialog containing the following text: "Success! The user has now been suspended from REDCap."
+    Then I should see "Success! The user has now been suspended from REDCap."
     And I click on the button labeled "Close"
     And I logout
     

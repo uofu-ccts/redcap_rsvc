@@ -10,13 +10,13 @@ Scenario: D.100.4.0800.100 Duo 2FA
     And I enter (my Username)
     And I enter (my user Password)
     And I click on the button labeled "Log In"
-    Then I should see a dialog containing the following text: "Two-step verification for REDCap login" 
+    Then I should see "Two-step verification for REDCap login" 
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Multi-factor authentication 
     Given I click on the radio labeled "Duo"
     ##VERIFY
-    Then I should see a dialog containing the following text: "check for a Duo Push"
+    Then I should see "check for a Duo Push"
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Duo Push

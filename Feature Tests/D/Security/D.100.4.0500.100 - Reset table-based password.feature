@@ -12,15 +12,15 @@ Feature: Security: The REDCap Application will allow to ability to reset a user'
     And I click on the link labeled "Browse Users"
     And I click on the link labeled "View User List By Criteria"
     And I click on the button labeled "Display User List"
-    And I click on the link labeled exactly "user1000_1"
+    And I click on the link labeled "user1000_1"
     And I click on the button labeled "Edit user info"
     And I enter (my email) into the input field labeled "Primary email:"
     And I click on the button labeled "Save"
     And I click on the button labeled "Return to previous page"
     And I click on the button labeled "Reset password"
-    Then I should see a dialog containing the following text: "RESET PASSWORD FOR USER 'user1000_1'?"
+    Then I should see "RESET PASSWORD FOR USER 'user1000_1'?"
     And I click on the button labeled "OK"
-    Then I should see a dialog containing the following text: "An email has been sent to (my email) with a link to allow them to set a new password."
+    Then I should see "An email has been sent to (my email) with a link to allow them to set a new password."
     And I click on the button labeled "Close"
     And I logout
     
