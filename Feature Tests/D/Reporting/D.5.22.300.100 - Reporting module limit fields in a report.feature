@@ -11,7 +11,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     #SETUP_PRODUCTION
     When I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
-    And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
+    And I click on the radio labeled "Keep ALL data saved so far"
     And I wait for another 2 seconds
     And I click on the button labeled "YES, Move to Production Status"
     Then I should see "Project status:  Production"
@@ -22,7 +22,8 @@ Feature: Reporting: The system shall support the ability to limit fields include
     And I click on the button labeled "Create New Report"
     And I enter "D.5.22.300.100 REPORT" into the input field labeled "Name of Report:"
     And I click on the button labeled "Save Report"
-    Then I should see "Your report has been saved!" in the dialog box
+    Then I should see "Your report has been saved!"
+    And I wait for another 2 seconds
 
     ##VERIFY: saved name
     When I click on the button labeled "View report"
@@ -36,7 +37,8 @@ Feature: Reporting: The system shall support the ability to limit fields include
     ##ACTION:  edit report name
     When I clear field and enter "D.5.22.300.100 REPORT_EDIT" into the input field labeled "Name of Report:"
     And I click on the button labeled "Save Report"
-    Then I should see "Your report has been saved!" in the dialog box
+    Then I should see "Your report has been saved!"
+    And I wait for another 2 seconds
 
     ##VERIFY: edited name
     When I click on the button labeled "View report"
@@ -49,7 +51,8 @@ Feature: Reporting: The system shall support the ability to limit fields include
     And I should see "D.5.22.300.100 REPORT_EDIT"
     And I enter "Test description" into the field identified by "textarea#description" labeled "Description (optional):"
     And I click on the button labeled "Save Report"
-    Then I should see "Your report has been saved!" in the dialog box
+    Then I should see "Your report has been saved!"
+    And I wait for another 2 seconds
 
     ##VERIFY: edited description
     When I click on the button labeled "View report"
@@ -79,10 +82,11 @@ Feature: Reporting: The system shall support the ability to limit fields include
 
     #FUNCTIONAL_REQUIREMENT
     ##ACTION:  edit fields included
-    When I enter "prefname" into the field identified by "input.x-form-text.x-form-field.field-dropdown" labeled "Field 2"
+    When I click on the field labeled "Field 2"
+    And I enter "prefname" into the field identified by "input.x-form-text.x-form-field.field-auto-suggest" labeled "Field 2"
     And I click on the button labeled "Save Report"
-    And I click on the button labeled "Save Report"
-    Then I should see "Your report has been saved!" in the dialog box
+    Then I should see "Your report has been saved!"
+    And I wait for another 2 seconds
 
     ##VERIFY: included field
     When I click on the button labeled "View report"
@@ -91,28 +95,31 @@ Feature: Reporting: The system shall support the ability to limit fields include
     #FUNCTIONAL_REQUIREMENT
     #ACTION:  edit filters
     When I click on the button labeled "Edit Report"
-    And I enter "years_injury" into the field identified by "input.x-form-text.x-form-field.field-auto-suggest.ui-autocomplete-input" labeled "Filter 1"
-    And I should see the dropdown field labeled "Operator" with the options below
+    And I click on the field labeled "Filter 1"
+    And I enter "years_injury" into the input field labeled "Filter 1"
+    And I should see the dropdown field labeled "Filter 1" with the options below
     | =                |
     | not =            |
     | contains         |
     | does not contain |
     | starts with      |
     | ends with        |
-    And I select "=" on the dropdown field labeled "Operator" 
-    And I enter "1" into the input field labeled "Value" 
-    And I enter "default_years" into the field identified by "input.x-form-text.x-form-field.field-auto-suggest.ui-autocomplete-input" labeled "Filter 2"
-    And I should see the dropdown field labeled "Operator" with the options below
+    And I select "=" on the dropdown field labeled "Filter 1"
+    And I enter "1" into the field identified by "input.limiter-value" labeled "Filter 1"
+    And I click on the field labeled "Filter 2"
+    And I enter "default_years" into the input field labeled "Filter 2"
+    And I should see the dropdown field labeled "Filter 2" with the options below
     | =     |
     | not = |
     | <     |
     | < =   |
     | >     |
     | > =   |
-    And I select "=" on the dropdown field labeled "Operator" 
-    And I enter "18" into the input field labeled "Value" 
+    And I select "=" on the dropdown field labeled "Filter 2"
+    And I enter "18" into the field identified by "input.limiter-value" labeled "Filter 2"
     And I click on the button labeled "Save Report"
-    Then I should see "Your report has been saved!" in the dialog box
+    Then I should see "Your report has been saved!"
+    And I wait for another 2 seconds
 
     ##VERIFY: included field
     When I click on the button labeled "Continue editing report"
@@ -123,7 +130,8 @@ Feature: Reporting: The system shall support the ability to limit fields include
     | Descending order |
     And I select "Ascending order" on the dropdown field labeled "Ascending order" 
     And I click on the button labeled "Save Report"
-    Then I should see "Your report has been saved!" in the dialog box
+    Then I should see "Your report has been saved!"
+    And I wait for another 2 seconds
 
     ##VERIFY: included field
     When I click on the button labeled "View report"

@@ -9,7 +9,7 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
     And I create a new project named "D.4.20.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
-    And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
+    And I click on the radio labeled "Keep ALL data saved so far"
     And I click on the button labeled "YES, Move to Production Status"
     Then I should see "Project status:  Production"
 
@@ -39,16 +39,16 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
     And I click on the button labeled "Compose confirmation email"
 
     #VERIFY
-    Then I should see "Compose confirmation email" in the dialog box
-    And I should see "From:" in the dialog box
-    And I should see "To:" in the dialog box
-    And I should see "Subject:" in the dialog box
-    And I should see "test_admin@test.edu" in the dialog box
-    And I should see "Dear REDCap user," in the dialog box
-    And I should see "We received your request for making production changes to the REDCap project" in the dialog box
-    And I should see "These changes MIGHT modify and/or delete existing data. So we ask 2 things of you:" in the dialog box
-    And I should see "Send Email" in the dialog box
-    And I should see "Cancel" in the dialog box
+    Then I should see "Compose confirmation email"
+    And I should see "From:"
+    And I should see "To:"
+    And I should see "Subject:"
+    And I should see "test_admin@test.edu"
+    And I should see "Dear REDCap user,"
+    And I should see "We received your request for making production changes to the REDCap project"
+    And I should see "These changes MIGHT modify and/or delete existing data. So we ask 2 things of you:"
+    And I should see "Send Email"
+    And I should see "Cancel"
     And I click on the button labeled "Send Email"
-    Then I should see "EMAIL SENT!" in the dialog box
+    Then I should see "EMAIL SENT!"
 #END
