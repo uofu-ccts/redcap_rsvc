@@ -32,5 +32,6 @@ Feature: Accuracy and Reliability: The first pages of the printable pdf shall in
     #FUNCTIONAL REQUIREMENT
     ##VERIFY
     And I wait for another 5 seconds
-    Then I should see a PDF containing the following text: "Consent example English" 
+    Then I should see the consent pdf has loaded in the iframe
+    Then I should see "Consent example English" 
 #END

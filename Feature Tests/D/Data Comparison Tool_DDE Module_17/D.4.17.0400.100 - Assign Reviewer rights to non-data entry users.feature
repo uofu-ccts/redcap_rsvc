@@ -7,9 +7,8 @@ Feature: Data Comparison Tool / DDE Module: The system shall assign Reviewer rig
     #SETUP_PRODUCTION
     Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.4.17.400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
-    And I click on the "Disable" button labeled "Use surveys in this project?" in the "Main project settings" section 
+    And I click on the button labeled "Disable" in the row labeled "Use surveys in this project?"  
     And I click on the button labeled "Disable"
-    And I wait for another 3 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far"
     And I click on the button labeled "YES, Move to Production Status"
@@ -19,7 +18,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall assign Reviewer rig
     And I click on the link labeled "Edit Project Settings"
     And I select "Enabled" on the dropdown field labeled "Double Data Entry module"
     And I click on the button labeled "Save Changes"
-    Then I see "Your changes have been saved!"
+    Then I should see "Your changes have been saved!"
 
     #FUNCTIONAL REQUIREMENT    
     ##ACTION: ADD DATA ENTRY PERSONS
@@ -27,14 +26,14 @@ Feature: Data Comparison Tool / DDE Module: The system shall assign Reviewer rig
     And I click on the link labeled "User Rights"
     And I enter "Test_User2" into the field with the placeholder text of "Add new user"
     And I click on the button labeled "Add with custom rights"
-    And I select the User Right named "Double Data Entry" and choose "Person #1" 
+    And I click on the radio labeled "Person #1" in the row labeled "Double Data Entry"
     And I click on the button labeled "Add user"
     Then I should see "Test User2"
 
     When I click on the link labeled "User Rights"
     And I enter "Test_User3" into the field with the placeholder text of "Add new user"
     And I click on the button labeled "Add with custom rights"
-    And I select the User Right named "Double Data Entry" and choose "Person #2" 
+    And I click on the radio labeled "Person #2" in the row labeled "Double Data Entry"
     And I click on the button labeled "Add user"
     Then I should see "Test User3"
 
