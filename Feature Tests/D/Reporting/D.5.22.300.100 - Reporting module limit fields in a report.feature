@@ -49,7 +49,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     When I click on the button labeled "Edit Report"
     Then I should see "Edit Existing Report:"
     And I should see "D.5.22.300.100 REPORT_EDIT"
-    And I enter "Test description" into the field identified by "textarea#description" labeled "Description (optional):"
+    And I enter "Test description" into the textarea field labeled "Description (optional):"
     And I click on the button labeled "Save Report"
     Then I should see "Your report has been saved!"
     And I wait for another 2 seconds
