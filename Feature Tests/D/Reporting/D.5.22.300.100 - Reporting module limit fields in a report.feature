@@ -97,6 +97,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     When I click on the button labeled "Edit Report"
     And I click on the field labeled "Filter 1"
     And I enter "years_injury" into the input field labeled "Filter 1"
+    And I wait for another 2 seconds
     And I should see the dropdown field labeled "Filter 1" with the options below
     | =                |
     | not =            |
@@ -108,6 +109,7 @@ Feature: Reporting: The system shall support the ability to limit fields include
     And I enter "1" into the field identified by "input.limiter-value" labeled "Filter 1"
     And I click on the field labeled "Filter 2"
     And I enter "default_years" into the input field labeled "Filter 2"
+    And I wait for another 2 seconds
     And I should see the dropdown field labeled "Filter 2" with the options below
     | =     |
     | not = |
