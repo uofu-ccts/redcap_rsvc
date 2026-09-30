@@ -10,7 +10,7 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     And I create a new project named "D.100.4.1100.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Customize & Manage Locking/E-signatures"
     Then I should see "Customize and Manage the Record Locking and E-signature Functionality"
-    And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Attestation Data Entry"
+    And I check the checkbox in the column labeled "Also display E-signature option on instrument?" and the row labeled "Attestation Data Entry"
     And I click on the link labeled "Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far"
