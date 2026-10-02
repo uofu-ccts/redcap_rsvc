@@ -25,12 +25,10 @@ Feature: User Interface: The system shall interface with API functions create ne
     ##ACTION: Simulate the user importing a file into the File Repository using the API
     Given I click on the link labeled "API Playground"
     And I select "Import a File into the File Repository" on the dropdown field labeled "API Method"
-    And I click on the button labeled "Choose File"
-    And I upload a "png" format file located at "import_files/File_Upload.png", by clicking the button near "No file chosen" to browse for the file, and clicking the button labeled "Open" to upload the file
+    And I upload a "png" format file located at "import_files/File_Upload.png", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Execute Request" to upload the file
     And I click on the link labeled "Update"
-    And I wait for 1 second
     And I click on the button labeled "Execute Request"
-    And I wait for 1 second
+
     ##VERIFY
     And I click on the link labeled "File Repository"
     Then I should see "File_Upload.png"

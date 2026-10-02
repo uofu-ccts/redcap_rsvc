@@ -8,8 +8,8 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.100.4.0900.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Customize & Manage Locking/E-signatures"
-    And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Attestation Data Entry"
-    And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Documentation of Informed Consent"
+    And I check the checkbox in the column labeled "Also display E-signature option on instrument?" and the row labeled "Attestation Data Entry"
+    And I check the checkbox in the column labeled "Also display E-signature option on instrument?" and the row labeled "Documentation of Informed Consent"
     And I click on the link labeled "Setup"
     And I wait for another 2 seconds
     And I click on the button labeled "Move project to production"
@@ -47,7 +47,7 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     Then I should see "test_admin"
-    And I enter the password "Testing123" for e-signature
+    And I enter "Testing123" into the input field labeled "Password:"
     And I click on the button labeled "Save"
     Then I should see "E-signed by test_admin"
     And I should see "Instrument locked by test_admin"

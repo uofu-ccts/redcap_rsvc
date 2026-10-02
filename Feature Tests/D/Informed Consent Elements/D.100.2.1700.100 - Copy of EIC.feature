@@ -15,11 +15,11 @@ Feature: Informed Consent Elements: A copy of the informed consent must be provi
     Then I should see "Project status:  Production"
     
     #SETUP CONFIRMATION EMAIL
-    Given I click on the button labeled "Disable" in the "Designate an email field for communications (including survey invitations and alerts)" row in the "Enable optional modules and customizations" section
+    When I click on the button labeled "Disable" in the row labeled "Designate an email field for communications (including survey invitations and alerts)"
     And I click on the button labeled "Undesignate field"
     And I wait for 1 second
     And I click on the link labeled "Designer"
-    And I click on the "Survey settings" button for the instrument row labeled "eConsent - ICF"
+    And I click on the button labeled "Survey settings" in the row labeled "eConsent - ICF"
     And I select "Yes" on the dropdown field labeled "Send confirmation email?"
     And I enter "EIC Copy" into the input field labeled "Subject"
     #There is something wrong with this step below, it works but seems to not actually register that anything was entered in Cypress? Must click into field for it to save

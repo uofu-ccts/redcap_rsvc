@@ -11,7 +11,7 @@ Feature: EIC / EDC Core Requirements: By default, the 'Save and return later' fu
     #FUNCTIONAL REQUIREMENT
     ##VERIFY
     When I click on the link labeled "Designer" 
-    And I click on the "Survey settings" button for the instrument row labeled "eConsent - ICF"
+    And I click on the button labeled "Survey settings" in the row labeled "eConsent - ICF"
     Then I should see the dropdown field labeled "Allow 'Save & Return Later' option for respondents?" with the option "No" selected
     And I click on the button labeled "Cancel"
 

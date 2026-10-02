@@ -20,8 +20,8 @@ Feature: Manually add email to participant list: The system shall support the ab
     And I click on the link labeled "Participant List"
     And I click on the button labeled "Add participants"
     And I enter "test@test.com" into the textarea field labeled "Add Emails to Participant List" 
-    And I click on the button labeled "Add participants"##VERIFY
-    Then I should see a dialog containing the following text: "PARTICIPANTS ADDED!" 
+    And I click on the button labeled "Add participants"
+    Then I should see "PARTICIPANTS ADDED!" 
     And I should see "Email"
     And I should see "Record"
     And I should see "Participant Identifier"

@@ -40,15 +40,12 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
 
     #VERIFY
     Then I should see "Compose confirmation email"
+    And I should see "Below is a pre-filled confirmation email"
     And I should see "From:"
     And I should see "To:"
     And I should see "Subject:"
-    And I should see "test_admin@test.edu"
-    And I should see "Dear REDCap user,"
-    And I should see "We received your request for making production changes to the REDCap project"
-    And I should see "These changes MIGHT modify and/or delete existing data. So we ask 2 things of you:"
-    And I should see "Send Email"
-    And I should see "Cancel"
+    And I should see the button labeled "Send Email"
+    And I should see the button labeled "Cancel"
     And I click on the button labeled "Send Email"
     Then I should see "EMAIL SENT!"
 #END

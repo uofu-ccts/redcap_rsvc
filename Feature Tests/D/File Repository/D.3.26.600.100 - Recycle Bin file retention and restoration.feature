@@ -22,7 +22,7 @@ Feature: File Repository: The system shall support file retention rules for the 
     Then I should see "100% uploaded"
 
     ##ACTION: Delete the file
-    Given I click on the Delete icon for the File Repository file named "LargeFileUpload.txt" 
+    Given I click on the icon labeled "Delete" in the row labeled "LargeFileUpload.txt"
     And I click on the button labeled "Delete"
     And I wait for another 2 seconds
     And I click on the link labeled "Recycle Bin"

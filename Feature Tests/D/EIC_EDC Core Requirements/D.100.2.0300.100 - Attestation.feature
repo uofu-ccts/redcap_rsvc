@@ -33,7 +33,7 @@ Feature: EIC / EDC Core Requirements: The system shall allow for an Attestation 
 
     #SETUP_SURVEY
     When I click on the link labeled "Designer"
-    Then I click on the "Enable" button for the instrument row labeled "Attestation Data Entry"
+    Then I click on the button labeled "Enable" in the row labeled "Attestation Data Entry"
     And I click on the button labeled "Save Changes"
     Then I should see "Your survey settings were successfully saved!"
    

@@ -16,9 +16,9 @@ Feature: Direct data entry through the survey feature: The system shall allow cr
 
     #ACTION
     #Disable and enable designated email field in project setup
-    When I click on the button labeled "Disable" in the "Designate an email field for communications (including survey invitations and alerts)" row in the "Enable optional modules and customizations" section
+    When I click on the button labeled "Disable" in the row labeled "Designate an email field for communications (including survey invitations and alerts)"
     And I click on the button labeled "Undesignate field"
-    When I click on the button labeled "Enable" in the "Designate an email field for communications (including survey invitations and alerts)" row in the "Enable optional modules and customizations" section
+    When I click on the button labeled "Enable" in the row labeled "Designate an email field for communications (including survey invitations and alerts)"
     And I select "email_address" on the dropdown field labeled "-- select a field --"
     And I click on the button labeled "Save"
 
