@@ -33,5 +33,5 @@ Feature: Accuracy and Reliability: The first pages of the printable pdf shall in
     ##VERIFY
     And I wait for another 5 seconds
     Then I should see the consent pdf has loaded in the iframe
-    Then I should see "Consent example English" 
+    Then I should see the embedded consent PDF containing "Consent example English"
 #END
