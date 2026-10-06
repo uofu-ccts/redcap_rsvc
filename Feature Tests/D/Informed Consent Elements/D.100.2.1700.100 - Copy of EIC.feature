@@ -22,14 +22,15 @@ Feature: Informed Consent Elements: A copy of the informed consent must be provi
     And I click on the button labeled "Survey settings" in the row labeled "eConsent - ICF"
     And I select "Yes" on the dropdown field labeled "Send confirmation email?"
     And I enter "EIC Copy" into the input field labeled "Subject"
-    #There is something wrong with this step below, it works but seems to not actually register that anything was entered in Cypress? Must click into field for it to save
-    And I enter "Attached is your completed eConsent" into the input field labeled "Send confirmation email?"
+    And I enter "Attached is your completed eConsent" into the survey confirmation email body
     And I check the checkbox labeled "Include PDF of completed survey as attachment"
     And I click on the button labeled "Save Changes"
+    Then I should see "Your survey settings were successfully saved!"
     
     #FUNCTIONAL REQUIREMENT
-    ##VERIFY
-    When I click on the link labeled "Record Status Dashboard"
+    #VERIFY
+    Given I save the URL linked by "Record Status Dashboard" as "recordStatusDashboard"
+    When I visit the saved URL "recordStatusDashboard"
     And I click on the link labeled "1"
     And I click the bubble to add a record for the "Screening" longitudinal instrument on event "Screening"
     And I enter "test@test.com" into the data entry form field labeled "Email Address for eConsent"
@@ -55,10 +56,21 @@ Feature: Informed Consent Elements: A copy of the informed consent must be provi
 
     #FUNCTIONAL REQUIREMENT
     ##VERIFY
-    Given I enter (my email) into the field with the placeholder text of "Enter email address"
+    Given I enter "test@test.com" into the field with the placeholder text of "Enter email address"
     And I click on the button labeled "Send confirmation email"
     Then I should see "Email successfully sent!"
-    Given I open the confirmation email
-    Then I should see "Attached is your completed eConsent"
-    And I should see a PDF attachment
+    Given I visit the saved URL "recordStatusDashboard"
+    Then I should see "Record Status Dashboard (all records)"
+
+    Given I click on the link labeled "Email Logging"
+    Then I should see "Must agree to disclaimer before accessing page"
+    And I click on the button labeled "I understand and agree"
+    Then I should see "Email Logging"
+    Then I click on the button labeled "Search emails"
+    Then I should see "1 matching results"
+    
+    Given I click the View msg icon for the first email
+    Then I should see "EIC Copy"
+    And I should see "Attached is your completed eConsent"
+    And I should see "Attachments (1 file)"
 #END
