@@ -6,6 +6,14 @@ Feature: Electronic Data Records: Email shall automatically be sent to the parti
   Scenario: D.100.2.1200.100 Email invitation
     #SETUP_PRODUCTION
     Given I successfully login to REDCap with the user "Test_Admin"
+    And I click on the link labeled "Control Center"
+    And I click on the link labeled "Cron Jobs"
+    And I save the URL linked by "My Projects" as "myProjects"
+    And I save the URL linked by "http://localhost:8080/cron.php" as "cron"
+    And I visit the saved URL "cron"
+    Then I should see "Cron Run Report"
+    Given I visit the saved URL "myProjects"
+
     And I create a new project named "D.100.2.1200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
@@ -18,9 +26,10 @@ Feature: Electronic Data Records: Email shall automatically be sent to the parti
     When I click on the link labeled "Survey Distribution Tools"
     And I click on the link labeled "Participant List"
     And I click on the button labeled "Add participants"
-    And I enter (my email) into the textarea field labeled "Add Emails to Participant List" 
-    And I click on the button labeled "Add participants"##VERIFY
-    Then I should see a dialog containing the following text: "PARTICIPANTS ADDED!" 
+    And I enter "test@test.com" into the textarea field labeled "Add Emails to Participant List"
+    And I click on the button labeled "Add participants"
+    ##VERIFY
+    Then I should see "PARTICIPANTS ADDED!"
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION
@@ -30,7 +39,9 @@ Feature: Electronic Data Records: Email shall automatically be sent to the parti
     
     ##VERIFY
     Given I click on the button labeled "Close"
-    And I open the survey link in my email
-    Then I should see "Prescreening"
-    And I should see "Please complete the survey below."
+    And I click on the link labeled "Survey Distribution Tools"
+    And I click on the link labeled "Survey Invitation Log"
+    Then I should see "Survey Invitation Log"
+    And I should see "test@test.com"
+    And I should see "Prescreening"
 #END
