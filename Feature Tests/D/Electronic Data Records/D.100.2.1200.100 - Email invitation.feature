@@ -42,6 +42,7 @@ Feature: Electronic Data Records: Email shall automatically be sent to the parti
     And I click on the link labeled "Survey Distribution Tools"
     And I click on the link labeled "Survey Invitation Log"
     Then I should see "Survey Invitation Log"
-    And I should see "test@test.com"
+    And I click on the button labeled "View past invitations"
+    Then I should see "test@test.com"
     And I should see "Prescreening"
 #END
