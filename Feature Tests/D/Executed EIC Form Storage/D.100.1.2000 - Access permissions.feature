@@ -19,6 +19,7 @@ CS: Archival object backup storage for database exports and for virtual machine 
 
   As a REDCap administrator
   I want to see that the backup storage location will only have Bareos and System Admin service Account permission.
+  #This feature is to be run completely MANUALLY on the REDCap Shadow instance
 
   Scenario: D.100.1.2000.100 Access permissions for backup storage location
     #FUNCTIONAL REQUIREMENT
